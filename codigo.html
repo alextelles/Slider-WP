@@ -1,0 +1,20 @@
+<?php //add me in
+		//Fields
+		//sua_galeria = Gallery Field
+		$images = get_field('sua_galeria');
+		if( $images ): ?>
+		<div class="slider-for">
+		<?php foreach( $images as $image ): ?>
+		  <div class="slick-container">
+		    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"class="img-responsive" />
+		  </div>
+		<?php endforeach; ?>
+			 </div>
+			 <div class="slider-nav">
+					 <?php foreach( $images as $image ): ?>
+					 <div class="col-md-2">
+		  			 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-responsive" />
+					 </div>
+					 <?php endforeach; ?>
+			 </div>
+					<?php endif; ?>
